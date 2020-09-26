@@ -1,0 +1,10 @@
+@import "base/index";
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main main main";
+}
