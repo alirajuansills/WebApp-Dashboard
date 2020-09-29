@@ -337,6 +337,10 @@ template {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -346,10 +350,19 @@ template {
 
 .header {
   grid-area: header;
+  background-color: #7477bf;
+  text-align: center;
+}
+
+.icon-bell {
+  margin: 1em auto;
+  width: 10%;
+  display: block;
 }
 
 .navigation {
   grid-area: navigation;
+  background-color: #3d41a8;
 }
 
 .main {
@@ -360,6 +373,14 @@ template {
 .widget-container-full,
 .widget-container-half {
   width: 95vw;
+}
+
+.button-primary {
+  background-color: #7477bf;
+}
+
+.button-disabled {
+  background-color: #bdb9b9;
 }
 
 @media (min-width: 768px) {

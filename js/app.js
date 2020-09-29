@@ -34,7 +34,7 @@ let trafficData = {
   datasets: [
     {
       data: [700, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
-      backgroundColor: "rgab(116, 119, 191, 3)",
+      backgroundColor: "rgba(116, 119, 191, .3)",
       borderWidth: 1,
     },
   ],
@@ -131,4 +131,23 @@ let mobileChart = new Chart(mobileCanvas, {
   type: "doughnut",
   data: mobileData,
   options: mobileOptions,
+});
+
+// Messaging Section
+const user = document.getElementById("userField");
+const message = document.getAnimations("messageField");
+const send = document.getElementById("send");
+
+send.addEventListener("click", () => {
+  // ensure user and message fields are filled out
+
+  if (user.value === "" && message.value === "") {
+    alert("Please fill out user and message fields before sending");
+  } else if (user.value === "") {
+    alert("Please fill out user field before sending");
+  } else if (message.value === "") {
+    alert("Please fill out lmessage field before sending");
+  } else {
+    alert(`Message successfully sent to: ${user.value}`);
+  }
 });
